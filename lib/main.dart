@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_april/widgets/navbar_widget.dart';
+import 'package:flutter_april/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ void main() {
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -27,10 +29,7 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Flutter April-test')),
-        bottomNavigationBar: NavbarWidget(),
-      ),
+      home: WidgetTree(),
     );
   }
 }
