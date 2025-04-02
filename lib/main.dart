@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_april/widgets/navbar_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+          brightness: Brightness.dark,
+        ),
+      ),
+      home: Scaffold(
+        appBar: AppBar(title: Text('Flutter April-test')),
+        bottomNavigationBar: NavbarWidget(),
       ),
     );
   }
