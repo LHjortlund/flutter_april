@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_april/data/notifiers.dart';
+
+class NavbarWidget extends StatelessWidget {
+  const NavbarWidget({super.key});
+
+  int selectedIndex = 0;
+
+  // This is the index of the selected item in the bottom navigation bar
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder(
+      valueListenable: selectedPageNotifier,
+      builder: (context, selectedPage, child) {
+        return NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Person'),
+            NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
+            NavigationDestination(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ],
+          onDestinationSelected: (int value) {
+            selectedPageNotifier.value = value;
+          },
+          selectedIndex: selectedPage,
+        );
+      },
+    );
+  }
+}

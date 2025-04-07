@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_april/widgets/navbar_widget.dart';
+import 'package:flutter_april/views/widgets/navbar_widget.dart';
 import 'package:flutter_april/views/widget_tree.dart';
 
 void main() {
