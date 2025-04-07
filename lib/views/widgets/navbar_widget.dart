@@ -4,8 +4,6 @@ import 'package:flutter_april/data/notifiers.dart';
 class NavbarWidget extends StatelessWidget {
   const NavbarWidget({super.key});
 
-  int selectedIndex = 0;
-
   // This is the index of the selected item in the bottom navigation bar
   @override
   Widget build(BuildContext context) {
