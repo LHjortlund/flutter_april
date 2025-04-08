@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_april/data/notifiers.dart';
 import 'package:flutter_april/views/pages/welcome_page.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -13,6 +14,8 @@ class SettingsPage extends StatelessWidget {
           ListTile(
             title: Text('Logout'),
             onTap: () {
+              selectedPageNotifier.value = 0;
+              // Clear the user data and navigate to the welcome page
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
