@@ -63,7 +63,18 @@ class _SearchPageState extends State<SearchPage> {
                   showDialog(
                     context: context,
                     builder: (context) {
-                      return AboutDialog();
+                      return AlertDialog(
+                        title: Text('Alert Title'),
+                        content: Text('Alert Content'),
+                        actions: [
+                          FilledButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      );
                     },
                   );
                 },
