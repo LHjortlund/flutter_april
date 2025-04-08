@@ -58,6 +58,7 @@ class _SearchPageState extends State<SearchPage> {
                   'Open SnackBar',
                 ), // Added the required child parameter
               ),
+              Divider(color: Colors.teal, height: 20, thickness: 2),
               ElevatedButton(
                 onPressed: () {
                   showDialog(
