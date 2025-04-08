@@ -5,6 +5,8 @@ import 'package:flutter_april/views/pages/home_page.dart';
 import 'package:flutter_april/views/pages/profile_page.dart';
 import 'package:flutter_april/views/pages/search_page.dart';
 import 'package:flutter_april/views/pages/settings_page.dart';
+import 'package:flutter_april/views/pages/welcome_page.dart';
+
 // This is a widget tree that will be used in the main.dart file
 // It will be used to create the main structure of the app
 
